@@ -21,8 +21,8 @@ export default function Home() {
 
       </Flex>
 
-      <Flex marginTop={"40px"} _hover={{cursor:"pointer"}} alt={"play anything random"} >
-      <Link href="/pages/player.js">
+      <Flex marginTop={"40px"} _hover={{cursor:"pointer"}} alt={"play anything random"}>
+      <Link href="./player">
       <svg width="348" height="355" viewBox="0 0 416 423" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f_31_115)">
       <ellipse cx="208" cy="211.5" rx="184" ry="187.5" fill="#FF3465"/>

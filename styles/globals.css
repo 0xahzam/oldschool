@@ -12,3 +12,9 @@ html{
   background-size: cover; 
 
 }
+
+.player{
+  background-image: url("../public/Player.png");
+  background-size: cover; 
+
+}
