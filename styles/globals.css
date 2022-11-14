@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 html{
-  background-image: url("../public/bg.png");
+  background-image: url("../public/fullbg.png");
   background-size: cover;
   
 
 }
 
 .main{
-  background-image: url("../public/bg.png");
+  background-image: url("../public/fullbg.png");
   background-size: cover; 
 
 }
