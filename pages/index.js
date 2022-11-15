@@ -13,63 +13,47 @@ export default function Home() {
     <div className='main'>
       <Flex flexDir={"column"} align={"center"}  paddingBottom={"38px"}>
 
-      <Flex color={"white"} gap={"40px"} marginTop={"52px"} marginRight={"94px"} marginLeft={"auto"}>
+      <Flex color={"white"} gap={"40px"} marginTop={"52px"} marginRight={"94px"} marginLeft={"auto"} display={{base:"none",md:"flex"}}>
         <Text paddingTop={"10px"}><a href='#story' onClick={(event) => scrollTo(event, '#story')}> Story </a></Text>
         <Text paddingTop={"10px"}><a href="https://www.google.com">Contribute Open Source</a></Text>
         <Button background={"#FF3465"} width={"176px"} height={"44px"} _hover={{backgroundColor:"white", color:"#FF3465"}}><a href="https://twitter.com/intent/user?user_id=1037821162548428800">Follow Creator </a> </Button>
       </Flex>
 
-      <Flex flexDir={"column"} marginTop={"52px"}>
-        <Text fontSize={"128px"} textAlign={"center"} letterSpacing={"7px"} fontFamily={"Six Caps, sans-serif"} color={"white"}>WATCH YOUR FAVOURITE CONTENTS </Text>
+      <Flex flexDir={"column"} marginTop={{base:"35vh ",md:"52px"}}>
+        <Text fontSize={{base:"40px",md:"128px"}} textAlign={"center"} letterSpacing={{base:"3px",md:"7px"}} fontFamily={"Six Caps, sans-serif"} color={"white"}>WATCH YOUR FAVOURITE CONTENTS </Text>
 
-        <Text fontFamily={"Architects Daughter, cursive"} textAlign={"center"} color={"white"} fontSize={"32px"}>The old school style</Text>
+        <Text fontFamily={"Architects Daughter, cursive"} textAlign={"center"} color={"white"} fontSize={{base:"15px",md:"32px"}}>The old school style</Text>
 
       </Flex>
 
-      <Flex marginTop={"40px"} _hover={{cursor:"pointer"}} alt={"play anything random"}>
+      <Flex marginTop={"40px"} _hover={{cursor:"pointer"}}>
       <Link href="./player">
-      <svg width="348" height="355" viewBox="0 0 416 423" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g filter="url(#filter0_f_31_115)">
-      <ellipse cx="208" cy="211.5" rx="184" ry="187.5" fill="#FF3465"/>
-      </g>
-      <ellipse cx="208" cy="211.5" rx="184" ry="187.5" fill="url(#paint0_linear_31_115)"/>
-      <path d="M317.575 187.478L167.04 94.9711C148.886 83.8148 126 97.4894 126 119.493V304.507C126 326.511 148.886 340.185 167.04 329.029L317.575 236.522C335.475 225.522 335.475 198.478 317.575 187.478Z" fill="#FF3465"/>
-      <defs>
-      <filter id="filter0_f_31_115" x="0" y="0" width="416" height="423" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur_31_115"/>
-      </filter>
-      <linearGradient id="paint0_linear_31_115" x1="208" y1="24" x2="208" y2="399" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1C1C1C"/>
-      <stop offset="1" stop-color="#1C1C1C" stop-opacity="0.8"/>
-      </linearGradient>
-      </defs>
-      </svg>
+        <Image width={{base:"200px",md:"368px"}} height={{base:"200px",md:"375px"}} src="./cta2.png" alt="cta"/>
+
       </Link>
       </Flex>
 
-      <Flex marginTop={"140px"} gap={"58px"} width={"1400px"} _hover={{cursor:"pointer"}}>
+      <Flex marginTop={{base:"300px",md:"140px"}} gap={"58px"} width={{base:"305px",md:"1400px"}} _hover={{cursor:"pointer"}} flexDir={{base:"column",md:"row"}}>
         <Flex flexDir={"column"} gap={"38px"}>
-          <Link href="./tmkoc"><Image src="./1.png" alt=""/></Link>
-          <Link href="./anime"><Image src="./2.png" alt=""/></Link>
+          <Link href="./tmkoc"><Image width={{base:"305px",md:"1400px"}}src="./1.png" alt=""/></Link>
+          <Link href="./anime"><Image  width={{base:"305px",md:"1400px"}}src="./2.png" alt=""/></Link>
         </Flex>
         <Flex flexDir={"column"} gap={"38px"}>
-          <Link href="./comedy"><Image src="./3.png" alt="comedy"/></Link>
-          <Link href="./gameplay"><Image src="./4.png" alt="gameplay"/></Link>
+          <Link href="./comedy"><Image width={{base:"305px",md:"1400px"}} src="./3.png" alt="comedy"/></Link>
+          <Link href="./gameplay"><Image  width={{base:"305px",md:"1400px"}}src="./4.png" alt="gameplay"/></Link>
         </Flex>
       </Flex>
 
       <div id='story'>
-      <Flex flexDir={"column"} color={"white"} width={"1400px"} marginTop={"140px"}>
-        <Text fontSize={"100px"} letterSpacing={"0px"} fontFamily={"Six Caps, sans-serif"}>STORY</Text>
-        <Text fontSize={"25px"}>
+      <Flex flexDir={"column"} color={"white"} width={{base:"283px",md:"1400px"}} marginTop={"140px"}>
+        <Text fontSize={{base:"50px",md:"100px"}} letterSpacing={"0px"} fontFamily={"Six Caps, sans-serif"}>STORY</Text>
+        <Text fontSize={{base:"15px",md:"25px"}}>
         The story starts when I was eating my lunch and I&apos;ve this old habit of mine to watch something while eating. I&apos;m doing this since I was a kid and I belive we all do this. The problem arrives when we open OTT Platforms and start searching but coundn’t find anything. I realized how good it was back then we just have to switch on our TV and watch whatever offered and it was actually pretty good back then.So I came up with this idea and created OldTV.xyz, watch your favourites shows the old style. It will play a random episode from YouTube.
         </Text>
       </Flex>
       </div>
 
-      <Flex flexDir={"row"} color={"white"} marginTop={"240px"} width={"1400px"} justifyContent={"space-between"}>
+      <Flex flexDir={"row"} color={"white"} marginTop={"240px"} width={{base:"293px",md:"1400px"}} justifyContent={"space-between"}>
       <Flex paddingTop={"4px"} _hover={{cursor:"pointer"}}>
       <a href="https://twitter.com/intent/tweet?text= Hey everyone checkout this amazing player by @priynshuratnakr which plays anything randomly of your choice from YouTube so you don't have to.">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,10 +70,10 @@ export default function Home() {
       </Flex>
 
 
-        <Flex gap={"31px"}>
-        <Text paddingTop={"10px"} >support our work via </Text>
+        <Flex gap={{base:"10px",md:"31px"}}>
+        <Text paddingTop={{base:"3px",md:"10px"}} fontSize={{base:"10px"}}>support our work via </Text>
         <a href="https://www.buymeacoffee.com/0xratnakar">
-        <Image _width="165" height={"34"}  hover={{cursor:"pointer"}} src="./bmc.png" alt="bmc"/>
+        <Image width={{base:"99px",md:"165px"}} height={{base:"21px",md:"34px"}}  hover={{cursor:"pointer"}} src="./bmc.png" alt="bmc"/>
         </a>
         </Flex>
 
