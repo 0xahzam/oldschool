@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.7",
-    "@emotion/react": "11",
+    "@emotion/react": "^11.10.5",
     "@emotion/styled": "11",
     "framer-motion": "6",
     "next": "^13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-player": "^2.11.0",
+    "react-scroll": "^1.8.8",
+    "react-web-share": "^2.0.2",
     "yarn": "^1.22.19"
   }
 }

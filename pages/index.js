@@ -2,14 +2,14 @@ import Head from 'next/head'
 import { Flex, Text, Button } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import Link from 'next/link';
-
+import link from 'react-scroll'
 export default function Home() {
   return (
     <div className='main'>
       <Flex flexDir={"column"} align={"center"}  paddingBottom={"38px"}>
 
       <Flex color={"white"} gap={"40px"} marginTop={"52px"} marginRight={"94px"} marginLeft={"auto"}>
-        <Text paddingTop={"10px"}>Story</Text>
+      <Text paddingTop={"10px"}><a className='story' href='story'> Story </a></Text>
         <Text paddingTop={"10px"}><a href="https://www.google.com">Contribute Open Source</a></Text>
         <Button background={"#FF3465"} width={"176px"} height={"44px"} _hover={{backgroundColor:"white", color:"#FF3465"}}><a href="https://twitter.com/intent/user?user_id=1037821162548428800">Follow Creator </a> </Button>
       </Flex>
@@ -45,25 +45,26 @@ export default function Home() {
       </Flex>
 
       <Flex marginTop={"140px"} gap={"58px"} width={"1400px"} _hover={{cursor:"pointer"}}>
-        <Flex flexDir={"column"} gap={"43px"}>
-          <Image src="./1.png" alt=""/>
-          <Image src="./2.png" alt=""/>
+        <Flex flexDir={"column"} gap={"38px"}>
+          <Link href="./tmkoc"><Image src="./1.png" alt=""/></Link>
+          <Link href="./anime"><Image src="./2.png" alt=""/></Link>
         </Flex>
-        <Flex flexDir={"column"} gap={"43px"}>
-          <Image src="./3.png" alt=""/>
-          <Image src="./4.png" alt=""/>
+        <Flex flexDir={"column"} gap={"38px"}>
+          <Link href="./comedy"><Image src="./3.png" alt="comedy"/></Link>
+          <Link href="./gameplay"><Image src="./4.png" alt="gameplay"/></Link>
         </Flex>
       </Flex>
 
+      <div className='story' id='story'>
       <Flex flexDir={"column"} color={"white"} width={"1400px"} marginTop={"140px"}>
         <Text fontSize={"100px"} letterSpacing={"0px"} fontFamily={"Six Caps, sans-serif"}>STORY</Text>
         <Text fontSize={"25px"}>
         The story starts when I was eating my lunch and I&apos;ve this old habit of mine to watch something while eating. I&apos;m doing this since I was a kid and I belive we all do this. The problem arrives when we open OTT Platforms and start searching but coundn’t find anything. I realized how good it was back then we just have to switch on our TV and watch whatever offered and it was actually pretty good back then.So I came up with this idea and created OldTV.xyz, watch your favourites shows the old style. It will play a random episode from YouTube.
         </Text>
       </Flex>
+      </div>
 
       <Flex flexDir={"row"} color={"white"} marginTop={"240px"} width={"1400px"} justifyContent={"space-between"}>
-
       <Flex paddingTop={"4px"} _hover={{cursor:"pointer"}}>
       <a href="https://twitter.com/intent/tweet?text= Hey everyone checkout this amazing player by @priynshuratnakr which plays anything randomly of your choice from YouTube so you don't have to.">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +83,9 @@ export default function Home() {
 
         <Flex gap={"31px"}>
         <Text paddingTop={"10px"} >support our work via </Text>
+        <a href="https://www.buymeacoffee.com/0xratnakar">
         <Image _width="165" height={"34"}  hover={{cursor:"pointer"}} src="./bmc.png" alt="bmc"/>
+        </a>
         </Flex>
 
 

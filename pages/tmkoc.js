@@ -16,7 +16,7 @@ export default function Home() {
 
     <Flex flexDir={"column"} align={"center"} marginTop={"67px"} marginLeft={"11"} >
          
-    <ReactPlayer url={"https://www.youtube.com/watch?v=1Ov4nczAPKo&list=PLw0OS4SJWbYBjpgcIQvCWyaffXd6w_DG4"}
+    <ReactPlayer url={"https://www.youtube.com/watch?v=6iPKsGKj7Bc&list=PL6Rtnh6YJK7ZFhouqhrvP3Sx0U7qxdzJi"}
       width={"1016px"} height={"579px"} 
       playsInline={true}
       playing={true}
