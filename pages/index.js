@@ -3,13 +3,18 @@ import { Flex, Text, Button } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import Link from 'next/link';
 import link from 'react-scroll'
-export default function Home() {
+export default function Home() { 
+  const scrollTo = (event, selector) => {
+  event.preventDefault();
+  document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+};
+
   return (
     <div className='main'>
       <Flex flexDir={"column"} align={"center"}  paddingBottom={"38px"}>
 
       <Flex color={"white"} gap={"40px"} marginTop={"52px"} marginRight={"94px"} marginLeft={"auto"}>
-      <Text paddingTop={"10px"}><a className='story' href='story'> Story </a></Text>
+        <Text paddingTop={"10px"}><a href='#story' onClick={(event) => scrollTo(event, '#story')}> Story </a></Text>
         <Text paddingTop={"10px"}><a href="https://www.google.com">Contribute Open Source</a></Text>
         <Button background={"#FF3465"} width={"176px"} height={"44px"} _hover={{backgroundColor:"white", color:"#FF3465"}}><a href="https://twitter.com/intent/user?user_id=1037821162548428800">Follow Creator </a> </Button>
       </Flex>
@@ -55,7 +60,7 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <div className='story' id='story'>
+      <div id='story'>
       <Flex flexDir={"column"} color={"white"} width={"1400px"} marginTop={"140px"}>
         <Text fontSize={"100px"} letterSpacing={"0px"} fontFamily={"Six Caps, sans-serif"}>STORY</Text>
         <Text fontSize={"25px"}>

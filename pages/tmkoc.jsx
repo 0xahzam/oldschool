@@ -3,12 +3,9 @@ import { Flex, Text, Button } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import Link from 'next/link';
 import ReactPlayer from 'react-player'
-import React, { useState } from "react";
 import { RWebShare } from "react-web-share";
+import axios from "axios"
 
-
-export default function Home() {
-  return (
     
     <div className="main">
 
@@ -16,11 +13,12 @@ export default function Home() {
 
     <Flex flexDir={"column"} align={"center"} marginTop={"67px"} marginLeft={"11"} >
          
-    <ReactPlayer url={"https://www.youtube.com/watch?v=6iPKsGKj7Bc&list=PL6Rtnh6YJK7ZFhouqhrvP3Sx0U7qxdzJi"}
+    <ReactPlayer url={sameLink1 + arr[id]}
       width={"1016px"} height={"579px"} 
       playsInline={true}
       playing={true}
       controls={true}
+      shuffle={true}
       volume={0.75}>
       </ReactPlayer>
 
@@ -46,5 +44,3 @@ export default function Home() {
     </Flex>
     </Flex>
   </div>
-)
-}
